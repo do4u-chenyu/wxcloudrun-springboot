@@ -15,7 +15,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <title>欢迎使用微信云托管</title>
+    <title>欢迎使用微信云托管icy</title>
     <style>
       .title-logo {
         height: 80px;
@@ -106,6 +106,7 @@
   <script>
     init();
     function init() {
+      console.log("init()。。。")
       $.ajax("/api/count", {
         method: "get",
       }).done(function (res) {
@@ -128,5 +129,8 @@
         }
       });
     }
+
+    //定时刷新结果
+    setInterval(init(),1000);
   </script>
 </html>

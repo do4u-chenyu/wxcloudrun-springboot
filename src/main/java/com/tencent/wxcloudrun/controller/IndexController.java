@@ -19,4 +19,10 @@ public class IndexController {
     return "index";
   }
 
+
+  @GetMapping("/entry")
+  public String entry() {
+    return "index";
+  }
+
 }
